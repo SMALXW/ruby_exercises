@@ -1,10 +1,10 @@
-def substring(str, dictionary)
+def substrings(string, array)
+    string.downcase!
     results = {}
-    str.downcase!
-    dictionary.each { |word| 
-        if str.include?(word)
-            results[word] = str.scan(word).count
-        end
+    array.each { |word|
+        if string.include?(word)
+            results[word] = string.scan(word).count
+        end }
     results
-    }
 end
+
